@@ -18741,7 +18741,7 @@ body:not(.search-results) .twentysixteen .entry-summary {
 	font-weight: 400;
 	font-display: auto;
 	src: url(wp-content/plugins/js_composer/assets/lib/bower/font-awesome/webfonts/fa-brands-400.eot);
-	src: url(https://wgl-dsites.net/genesisexpo/wp-content/plugins/js_composer/assets/lib/bower/font-awesome/webfonts/fa-brands-400.eot) format("embedded-opentype"), url(https://wgl-dsites.net/genesisexpo/wp-content/plugins/js_composer/assets/lib/bower/font-awesome/webfonts/fa-brands-400.woff2) format("woff2"), url(https://wgl-dsites.net/genesisexpo/wp-content/plugins/js_composer/assets/lib/bower/font-awesome/webfonts/fa-brands-400.woff) format("woff"), url(https://wgl-dsites.net/genesisexpo/wp-content/plugins/js_composer/assets/lib/bower/font-awesome/webfonts/fa-brands-400.ttf) format("truetype"), url(https://wgl-dsites.net/genesisexpo/wp-content/plugins/js_composer/assets/lib/bower/font-awesome/webfonts/fa-brands-400.svg) format("svg")
+	src: url(wp-content/plugins/js_composer/assets/lib/bower/font-awesome/webfonts/fa-brands-400.woff2) format("woff2"), url(wp-content/plugins/js_composer/assets/lib/bower/font-awesome/webfonts/fa-brands-400.woff) format("woff")
 }
 
 .fab {
@@ -55562,7 +55562,7 @@ body .wpb_gallery_slides ul li {
 }
 
 .vc_custom_1539241721582 {
-	background-image: url(wp-content/uploads/2026/christmas-carnival/6.jpg) !important;
+	background-image: linear-gradient(rgba(20, 8, 31, .72), rgba(20, 8, 31, .72)), url(wp-content/uploads/2026/christmas-carnival/6.jpg) !important;
 	background-position: center !important;
 	background-repeat: no-repeat !important;
 	background-size: cover !important;
@@ -55588,7 +55588,7 @@ body .wpb_gallery_slides ul li {
 }
 
 .vc_custom_1539258926219 {
-	background-image: url(wp-content/uploads/2026/christmas-carnival/2.jpg) !important;
+	background-image: linear-gradient(rgba(20, 8, 31, .72), rgba(20, 8, 31, .72)), url(wp-content/uploads/2026/christmas-carnival/2.jpg) !important;
 	background-position: center !important;
 	background-repeat: no-repeat !important;
 	background-size: cover !important;
@@ -60585,3 +60585,21 @@ body.no-page-shadows *::before,
 body.no-page-shadows *::after { box-shadow: none !important; text-shadow: none !important; }
 
 .venue-section-gap { margin-top: 40px !important; }
+
+/* Ticket + Experience sections sit on dark photos: keep text light and the big background titles faint. */
+.tickets-copy-col .heading_title,
+.tickets-copy-col .wpb_text_column,
+#schedule .heading_title,
+#schedule .wpb_text_column,
+#schedule .wgl_tab.active .tab_title,
+#schedule .wgl_tab:hover .tab_title,
+#schedule .item_title { color: #fff; }
+#schedule .tab_title { color: rgba(255, 255, 255, .7); }
+#schedule .item_description { color: rgba(255, 255, 255, .85); }
+/* Hovered cards get a white background (theme), so switch their text back to dark. */
+#schedule .timetabs_item:hover .item_title,
+#schedule .timetabs_item.hovered .item_title { color: #232323; }
+#schedule .timetabs_item:hover .item_description,
+#schedule .timetabs_item.hovered .item_description { color: #616161; }
+.tickets-copy-col .heading_bgtitle,
+#schedule .heading_bgtitle { color: rgba(255, 255, 255, .08) !important; }
