@@ -1,0 +1,33 @@
+#!/bin/sh
+# Automatic cache-busting for static assets.
+#
+# On every commit, rewrites `style.css?v=...` and `script.js?v=...` in all
+# tracked HTML files to the first 12 chars of the *staged* file's git hash.
+# The version changes only when the asset content changes, so browsers/CDNs
+# fetch the new file immediately after deploy and keep caching it otherwise.
+#
+# Enable once per clone:  git config core.hooksPath .githooks
+
+ASSETS="style.css script.js"
+
+for asset in $ASSETS; do
+	hash=$(git rev-parse --verify -q ":$asset" 2>/dev/null | cut -c1-12)
+	[ -n "$hash" ] || continue
+	pattern=$(printf '%s' "$asset" | sed 's/\./\\./g')
+
+	git ls-files '*.html' | while IFS= read -r html; do
+		[ -f "$html" ] || continue
+		grep -q "$pattern?v=" "$html" || continue
+		tmp="$html.tmp.$$"
+		sed "s/$pattern?v=[A-Za-z0-9._-]*/$asset?v=$hash/g" "$html" > "$tmp"
+		if cmp -s "$html" "$tmp"; then
+			rm -f "$tmp"
+		else
+			mv "$tmp" "$html"
+			git add "$html"
+			echo "pre-commit: $html -> $asset?v=$hash"
+		fi
+	done
+done
+
+exit 0
