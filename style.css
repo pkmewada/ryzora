@@ -55562,7 +55562,8 @@ body .wpb_gallery_slides ul li {
 }
 
 .vc_custom_1539241721582 {
-	background-image: linear-gradient(rgba(20, 8, 31, .72), rgba(20, 8, 31, .72)), url(wp-content/uploads/2026/christmas-carnival/6.jpg) !important;
+	background-color: #000000 !important;
+	background-image: linear-gradient(rgba(0, 0, 0, .72), rgba(0, 0, 0, .72)), url(wp-content/uploads/2026/christmas-carnival/16.webp) !important;
 	background-position: center !important;
 	background-repeat: no-repeat !important;
 	background-size: cover !important;
@@ -55581,7 +55582,7 @@ body .wpb_gallery_slides ul li {
 
 .vc_custom_1539251843398 {
 	padding-top: 0px !important;
-	background-image: url(wp-content/uploads/2026/christmas-carnival/1.jpg) !important;
+	background-image: url(wp-content/uploads/2026/christmas-carnival/15.webp) !important;
 	background-position: center !important;
 	background-repeat: no-repeat !important;
 	background-size: cover !important;
