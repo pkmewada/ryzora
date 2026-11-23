@@ -7016,7 +7016,7 @@ form.submitting .wpcf7-spinner {
 
 @font-face {
 	font-family: star;
-	src: url(../../wp-content/plugins/woocommerce/assets/fonts/star.eot);
+	src: url(../vendor/plugins/woocommerce/assets/fonts/star.eot);
 	src: url(https://wgl-dsites.net/genesisexpo/wp-content/plugins/woocommerce/assets/fonts/star.eot) format("embedded-opentype"), url(https://wgl-dsites.net/genesisexpo/wp-content/plugins/woocommerce/assets/fonts/star.woff) format("woff"), url(https://wgl-dsites.net/genesisexpo/wp-content/plugins/woocommerce/assets/fonts/star.ttf) format("truetype"), url(https://wgl-dsites.net/genesisexpo/wp-content/plugins/woocommerce/assets/fonts/star.svg) format("svg");
 	font-weight: 400;
 	font-style: normal
@@ -9820,11 +9820,11 @@ body:not(.search-results) .twentysixteen .entry-summary {
 
 @font-face {
 	font-family: "Flaticon";
-	src: url(../../wp-content/themes/genesisexpo/fonts/flaticon/Flaticon.eot);
-	src: url(../../wp-content/themes/genesisexpo/fonts/flaticon/Flaticond41d.eot) format("embedded-opentype"),
-		url(../../wp-content/themes/genesisexpo/fonts/flaticon/Flaticon.woff) format("woff"),
-		url(../../wp-content/themes/genesisexpo/fonts/flaticon/Flaticon.ttf) format("truetype"),
-		url(../../wp-content/themes/genesisexpo/fonts/flaticon/Flaticon.svg) format("svg");
+	src: url(../vendor/themes/genesisexpo/fonts/flaticon/Flaticon.eot);
+	src: url(../vendor/themes/genesisexpo/fonts/flaticon/Flaticond41d.eot) format("embedded-opentype"),
+		url(../vendor/themes/genesisexpo/fonts/flaticon/Flaticon.woff) format("woff"),
+		url(../vendor/themes/genesisexpo/fonts/flaticon/Flaticon.ttf) format("truetype"),
+		url(../vendor/themes/genesisexpo/fonts/flaticon/Flaticon.svg) format("svg");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -9832,7 +9832,7 @@ body:not(.search-results) .twentysixteen .entry-summary {
 @media screen and (-webkit-min-device-pixel-ratio:0) {
 	@font-face {
 		font-family: "Flaticon";
-		src: url(../../wp-content/themes/genesisexpo/fonts/flaticon/Flaticon.svg) format("svg");
+		src: url(../vendor/themes/genesisexpo/fonts/flaticon/Flaticon.svg) format("svg");
 	}
 }
 
@@ -18740,8 +18740,8 @@ body:not(.search-results) .twentysixteen .entry-summary {
 	font-style: normal;
 	font-weight: 400;
 	font-display: auto;
-	src: url(../../wp-content/plugins/js_composer/assets/lib/bower/font-awesome/webfonts/fa-brands-400.eot);
-	src: url(../../wp-content/plugins/js_composer/assets/lib/bower/font-awesome/webfonts/fa-brands-400.woff2) format("woff2"), url(../../wp-content/plugins/js_composer/assets/lib/bower/font-awesome/webfonts/fa-brands-400.woff) format("woff")
+	src: url(../vendor/plugins/js_composer/assets/lib/bower/font-awesome/webfonts/fa-brands-400.eot);
+	src: url(../vendor/plugins/js_composer/assets/lib/bower/font-awesome/webfonts/fa-brands-400.woff2) format("woff2"), url(../vendor/plugins/js_composer/assets/lib/bower/font-awesome/webfonts/fa-brands-400.woff) format("woff")
 }
 
 .fab {
@@ -27918,7 +27918,7 @@ body .select2-dropdown {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	background: url(../../wp-content/themes/genesisexpo/img/wave_header.svg);
+	background: url(../vendor/themes/genesisexpo/img/wave_header.svg);
 	height: 20%;
 	background-size: 100% 100%;
 	z-index: 21
@@ -37553,7 +37553,7 @@ h6 span {
 }
 
 .vc_pixel_icon-alert {
-	background-image: url(../../wp-content/plugins/js_composer/assets/vc/alert.png)
+	background-image: url(../vendor/plugins/js_composer/assets/vc/alert.png)
 }
 
 .vc_pixel_icon-info {
@@ -56920,7 +56920,7 @@ html.swipebox-html.swipebox-touch {
 }
 
 #swipebox-slider .slide-loading {
-	background: url(../../wp-content/themes/genesisexpo/js/swipebox/img/loader.gif) center center no-repeat
+	background: url(../vendor/themes/genesisexpo/js/swipebox/img/loader.gif) center center no-repeat
 }
 
 #swipebox-bottom-bar,
@@ -57233,11 +57233,11 @@ rs-sbg-px {
 
 @font-face {
 	font-family: 'revicons';
-	src: url(../../wp-content/plugins/revslider/public/assets/fonts/revicons/revicons90c6.eot);
-	src: url(../../wp-content/plugins/revslider/public/assets/fonts/revicons/revicons90c6.eot) format('embedded-opentype'),
-		url(../../wp-content/plugins/revslider/public/assets/fonts/revicons/revicons90c6.woff) format('woff'),
-		url(../../wp-content/plugins/revslider/public/assets/fonts/revicons/revicons90c6.ttf) format('truetype'),
-		url(../../wp-content/plugins/revslider/public/assets/fonts/revicons/revicons90c6.svg) format('svg');
+	src: url(../vendor/plugins/revslider/public/assets/fonts/revicons/revicons90c6.eot);
+	src: url(../vendor/plugins/revslider/public/assets/fonts/revicons/revicons90c6.eot) format('embedded-opentype'),
+		url(../vendor/plugins/revslider/public/assets/fonts/revicons/revicons90c6.woff) format('woff'),
+		url(../vendor/plugins/revslider/public/assets/fonts/revicons/revicons90c6.ttf) format('truetype'),
+		url(../vendor/plugins/revslider/public/assets/fonts/revicons/revicons90c6.svg) format('svg');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
@@ -57748,11 +57748,11 @@ rs-alyer *:not(.rs-wtbindex),
 }
 
 rs-carousel-wrap {
-	cursor: url(../../wp-content/plugins/revslider/public/assets/css/openhand.html), move;
+	cursor: url(../vendor/plugins/revslider/public/assets/css/openhand.html), move;
 }
 
 rs-carousel-wrap.dragged {
-	cursor: url(../../wp-content/plugins/revslider/public/assets/css/closedhand.html), move;
+	cursor: url(../vendor/plugins/revslider/public/assets/css/closedhand.html), move;
 }
 
 rs-carousel-wrap.noswipe {
@@ -58325,19 +58325,19 @@ rs-sbg-wrap rs-dotted {
 }
 
 rs-dotted.twoxtwo {
-	background: url(../../wp-content/plugins/revslider/public/assets/assets/gridtile.png)
+	background: url(../vendor/plugins/revslider/public/assets/assets/gridtile.png)
 }
 
 rs-dotted.twoxtwowhite {
-	background: url(../../wp-content/plugins/revslider/public/assets/assets/gridtile_white.png)
+	background: url(../vendor/plugins/revslider/public/assets/assets/gridtile_white.png)
 }
 
 rs-dotted.threexthree {
-	background: url(../../wp-content/plugins/revslider/public/assets/assets/gridtile_3x3.png)
+	background: url(../vendor/plugins/revslider/public/assets/assets/gridtile_3x3.png)
 }
 
 rs-dotted.threexthreewhite {
-	background: url(../../wp-content/plugins/revslider/public/assets/assets/gridtile_3x3_white.png)
+	background: url(../vendor/plugins/revslider/public/assets/assets/gridtile_3x3_white.png)
 }
 
 .tp-shadowcover {
@@ -58759,11 +58759,11 @@ rs-progress-vis {
 .rs-layer.slidelink a div {
 	width: 3000px;
 	height: 1500px;
-	background: url(../../wp-content/plugins/revslider/public/assets/assets/coloredbg.png) repeat
+	background: url(../vendor/plugins/revslider/public/assets/assets/coloredbg.png) repeat
 }
 
 .rs-layer.slidelink a span {
-	background: url(../../wp-content/plugins/revslider/public/assets/assets/coloredbg.png) repeat;
+	background: url(../vendor/plugins/revslider/public/assets/assets/coloredbg.png) repeat;
 	width: 100%;
 	height: 100%;
 	display: block
@@ -58832,7 +58832,7 @@ rs-loader.spinner0 {
 	width: 40px;
 	height: 40px;
 	background-color: #fff;
-	background-image: url(../../wp-content/plugins/revslider/public/assets/assets/loader.gif);
+	background-image: url(../vendor/plugins/revslider/public/assets/assets/loader.gif);
 	background-repeat: no-repeat;
 	background-position: center center;
 	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
@@ -58854,7 +58854,7 @@ rs-loader.spinner1 {
 }
 
 rs-loader.spinner5 {
-	background-image: url(../../wp-content/plugins/revslider/public/assets/assets/loader.gif);
+	background-image: url(../vendor/plugins/revslider/public/assets/assets/loader.gif);
 	background-repeat: no-repeat;
 	background-position: 10px 10px;
 	background-color: #fff;
