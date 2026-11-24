@@ -1,3 +1,15 @@
+html {
+	scroll-behavior: smooth;
+}
+
+#about,
+#support,
+#schedule,
+#gallery,
+#footer {
+	scroll-margin-top: 136px;
+}
+
 .site-header {
 	position: fixed;
 	z-index: 10000;
@@ -134,6 +146,14 @@
 }
 
 @media (max-width: 900px) {
+	#about,
+	#support,
+	#schedule,
+	#gallery,
+	#footer {
+		scroll-margin-top: 90px;
+	}
+
 	.site-header__inner {
 		width: calc(100% - 36px);
 		min-height: 78px;
@@ -197,6 +217,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+
 	.site-header,
 	.site-header__inner,
 	.site-header__toggle span,

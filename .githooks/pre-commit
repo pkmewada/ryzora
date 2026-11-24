@@ -1,25 +1,25 @@
 #!/bin/sh
 # Automatic cache-busting for static assets.
 #
-# On every commit, rewrites `style.css?v=...` and `script.js?v=...` in all
-# tracked HTML files to the first 12 chars of the *staged* file's git hash.
-# The version changes only when the asset content changes, so browsers/CDNs
-# fetch the new file immediately after deploy and keep caching it otherwise.
+# On every commit, rewrites versioned asset URLs in tracked HTML files to the
+# first 12 chars of the staged asset hash plus the gzip scheme version, and
+# refreshes the matching .gz files.
 #
 # Enable once per clone:  git config core.hooksPath .githooks
 
-ASSETS="style.css script.js"
+ASSETS="assets/css/style.css assets/css/header.css assets/js/script.js"
 
 for asset in $ASSETS; do
 	hash=$(git rev-parse --verify -q ":$asset" 2>/dev/null | cut -c1-12)
 	[ -n "$hash" ] || continue
+	hash="${hash}-gz1"
 	pattern=$(printf '%s' "$asset" | sed 's/\./\\./g')
 
 	git ls-files '*.html' | while IFS= read -r html; do
 		[ -f "$html" ] || continue
 		grep -q "$pattern?v=" "$html" || continue
 		tmp="$html.tmp.$$"
-		sed "s/$pattern?v=[A-Za-z0-9._-]*/$asset?v=$hash/g" "$html" > "$tmp"
+		sed "s|$pattern?v=[A-Za-z0-9._-]*|$asset?v=$hash|g" "$html" > "$tmp"
 		if cmp -s "$html" "$tmp"; then
 			rm -f "$tmp"
 		else
@@ -28,6 +28,28 @@ for asset in $ASSETS; do
 			echo "pre-commit: $html -> $asset?v=$hash"
 		fi
 	done
+done
+
+for asset in assets/css/style.css assets/css/header.css assets/js/script.js; do
+	gzip_asset="$asset.gz"
+	gzip_temp="$gzip_asset.tmp.$$"
+	if ! git cat-file -e ":$asset" 2>/dev/null; then
+		continue
+	fi
+	if git diff --cached --quiet -- "$asset" && git cat-file -e ":$gzip_asset" 2>/dev/null; then
+		continue
+	fi
+	if ! command -v python >/dev/null 2>&1; then
+		echo "pre-commit: Python is required to regenerate compressed CSS/JS assets." >&2
+		exit 1
+	fi
+	if ! git show ":$asset" | python -c 'import gzip,sys; sys.stdout.buffer.write(gzip.compress(sys.stdin.buffer.read(), compresslevel=9, mtime=0))' > "$gzip_temp"; then
+		rm -f "$gzip_temp"
+		echo "pre-commit: failed to compress $asset" >&2
+		exit 1
+	fi
+	mv "$gzip_temp" "$gzip_asset"
+	git add -- "$gzip_asset"
 done
 
 exit 0

@@ -55563,7 +55563,7 @@ body .wpb_gallery_slides ul li {
 
 .vc_custom_1539241721582 {
 	background-color: #000000 !important;
-	background-image: linear-gradient(rgba(0, 0, 0, .72), rgba(0, 0, 0, .72)), url(../photos/2026/christmas-carnival/16.webp) !important;
+	background-image: linear-gradient(rgba(0, 0, 0, .72), rgba(0, 0, 0, .72)), url(../photos/2026/christmas-carnival/optimized/16.webp) !important;
 	background-position: center !important;
 	background-repeat: no-repeat !important;
 	background-size: cover !important;
@@ -55582,33 +55582,39 @@ body .wpb_gallery_slides ul li {
 
 .vc_custom_1539251843398 {
 	padding-top: 0px !important;
-	background-image: url(../photos/2026/christmas-carnival/15.webp) !important;
+	background-image: url(../photos/2026/christmas-carnival/optimized/15.webp) !important;
 	background-position: center !important;
 	background-repeat: no-repeat !important;
 	background-size: cover !important;
 }
 
 .vc_custom_1539258926219 {
-	background-image: linear-gradient(rgba(20, 8, 31, .72), rgba(20, 8, 31, .72)), url(../photos/2026/christmas-carnival/2.jpg) !important;
+	background-color: #000000 !important;
+	background-image: linear-gradient(rgba(0, 0, 0, .72), rgba(0, 0, 0, .72)), url(../photos/2026/christmas-carnival/optimized/2.webp) !important;
 	background-position: center !important;
 	background-repeat: no-repeat !important;
 	background-size: cover !important;
 }
 
 .vc_custom_1539260292988 {
-	background-image: linear-gradient(rgba(20, 8, 31, .72), rgba(20, 8, 31, .72)), url(../photos/2026/christmas-carnival/7.jpg) !important;
+	background-color: #000000 !important;
+	background-image: linear-gradient(rgba(0, 0, 0, .72), rgba(0, 0, 0, .72)), url(../photos/2026/christmas-carnival/optimized/7.webp) !important;
 	background-position: center !important;
 	background-repeat: no-repeat !important;
 	background-size: cover !important;
 }
 
 .vc_custom_1539266549825 {
-	background-color: #e7c276 !important;
+	background-color: #ffffff !important;
 	margin-top: 60px !important;
 }
 
 .vc_custom_1539267354475 {
 	margin-bottom: -40px !important;
+}
+
+.carnival-highlights-section {
+	padding-top: 52px;
 }
 
 .vc_custom_1539853054854 {
@@ -55638,7 +55644,7 @@ body .wpb_gallery_slides ul li {
 }
 
 .vc_custom_1539250914553 {
-	background-image: url(../photos/2026/christmas-carnival/3.jpg) !important;
+	background-image: url(../photos/2026/christmas-carnival/optimized/3.webp) !important;
 	background-position: center !important;
 	background-repeat: no-repeat !important;
 	background-size: cover !important;
@@ -56664,35 +56670,35 @@ body .wpb_gallery_slides ul li {
 }
 
 #genesisexpo_counter_6ac7a7f8dc583 .counter_title {
-	color: #000000;
+	color: #000000 !important;
 }
 
 #genesisexpo_counter_6ac7a7f8dc583 .counter_value_wrap {
-	color: #000000;
+	color: #e7c276 !important;
 }
 
 #genesisexpo_counter_6ac7a7f8dca16 .counter_title {
-	color: #000000;
+	color: #000000 !important;
 }
 
 #genesisexpo_counter_6ac7a7f8dca16 .counter_value_wrap {
-	color: #000000;
+	color: #e7c276 !important;
 }
 
 #genesisexpo_counter_6ac7a7f8dce14 .counter_title {
-	color: #000000;
+	color: #000000 !important;
 }
 
 #genesisexpo_counter_6ac7a7f8dce14 .counter_value_wrap {
-	color: #000000;
+	color: #e7c276 !important;
 }
 
 #genesisexpo_counter_6ac7a7f8dd15a .counter_title {
-	color: #000000;
+	color: #000000 !important;
 }
 
 #genesisexpo_counter_6ac7a7f8dd15a .counter_value_wrap {
-	color: #000000;
+	color: #e7c276 !important;
 }
 
 @media only screen and (max-width: 992px) {
@@ -60575,8 +60581,16 @@ rs-loader.spinner15 .rs-spinner-inner:last-child {
 	top: 50%; right: auto; left: 50%; width: 34px; height: 34px; margin: 0;
 	transform: translate(-50%, -50%) scale(0);
 }
-.event-photo-strip .inside_image .swipebox_icon:not(.title_sw):before { top: 16px; height: 2px; }
-.event-photo-strip .inside_image .swipebox_icon:not(.title_sw):after { left: 16px; width: 2px; }
+.event-photo-strip .inside_image .swipebox_icon:not(.title_sw):before {
+	top: 16px;
+	height: 2px;
+	background: #e7c276;
+}
+.event-photo-strip .inside_image .swipebox_icon:not(.title_sw):after {
+	left: 16px;
+	width: 2px;
+	background: #e7c276;
+}
 .event-photo-strip .inside_image:hover .swipebox_icon:not(.title_sw) {
 	opacity: 1; transform: translate(-50%, -50%) scale(1);
 }
