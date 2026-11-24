@@ -7,7 +7,7 @@
 #
 # Enable once per clone:  git config core.hooksPath .githooks
 
-ASSETS="assets/css/style.css assets/css/header.css assets/js/script.js"
+ASSETS="assets/css/style.css assets/css/header.css assets/js/script.js assets/js/page.js"
 
 for asset in $ASSETS; do
 	hash=$(git rev-parse --verify -q ":$asset" 2>/dev/null | cut -c1-12)
@@ -30,7 +30,7 @@ for asset in $ASSETS; do
 	done
 done
 
-for asset in assets/css/style.css assets/css/header.css assets/js/script.js; do
+for asset in assets/css/style.css assets/css/header.css assets/js/script.js assets/js/page.js; do
 	gzip_asset="$asset.gz"
 	gzip_temp="$gzip_asset.tmp.$$"
 	if ! git cat-file -e ":$asset" 2>/dev/null; then
